@@ -11,14 +11,15 @@ import Lottie
 
 class ViewController: UIViewController {
     
-    var currentAnimation = "bitcoin_to_the_moon"
-    let animations = ["bitcoin_to_the_moon", "deadpool"]
+    var currentAnimation = "loading"
+    let animations = ["loading", "material_wave_loading", "preloader"]
 
     
     lazy var button: UIButton = {
        let button = UIButton()
         button.setTitle("Next Animation", for: .normal)
-        button.setTitleColor(.red, for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.addTarget(self, action: #selector(handleTap), for: .touchUpInside)
         return button
     }()
@@ -30,7 +31,13 @@ class ViewController: UIViewController {
     }()
     
     @objc fileprivate func handleTap() {
-        currentAnimation = currentAnimation == "bitcoin_to_the_moon" ?  animations[1] : animations[0]
+        if currentAnimation == "preloader" {
+            currentAnimation = "loading"
+        } else {
+            if let i = animations.index(where: { $0 == currentAnimation }) {
+                currentAnimation =  animations[i + 1]
+            }
+        }
         animationView.setAnimation(named: currentAnimation)
 
         animationView.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
@@ -44,7 +51,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor =  UIColor(red:0.17, green:0.17, blue:0.24, alpha:1.00)
         beginAnimation()
         
         view.addSubview(animationView)
@@ -60,7 +67,7 @@ class ViewController: UIViewController {
     }
     
     func beginAnimation() {
-        animationView.setAnimation(named: currentAnimation)
+        animationView.setAnimation(named: animations[0])
         animationView.play()
     }
     

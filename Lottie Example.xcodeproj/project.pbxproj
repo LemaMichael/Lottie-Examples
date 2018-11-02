@@ -7,28 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C0A1279218BFFE700EF3519 /* confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C0A1278218BFFE700EF3519 /* confetti.json */; };
+		4C0A127B218BFFEC00EF3519 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C0A127A218BFFEC00EF3519 /* loading.json */; };
+		4C0A1281218C001300EF3519 /* material_wave_loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C0A1280218C001300EF3519 /* material_wave_loading.json */; };
+		4C0A1283218C001B00EF3519 /* preloader.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C0A1282218C001B00EF3519 /* preloader.json */; };
 		4CF086A1218A207D00CFE230 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF086A0218A207D00CFE230 /* AppDelegate.swift */; };
 		4CF086A3218A207D00CFE230 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF086A2218A207D00CFE230 /* ViewController.swift */; };
 		4CF086A8218A207E00CFE230 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CF086A7218A207E00CFE230 /* Assets.xcassets */; };
 		4CF086AB218A207E00CFE230 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF086A9218A207E00CFE230 /* LaunchScreen.storyboard */; };
-		4CF086B5218A22A400CFE230 /* deadpool.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CF086B4218A22A400CFE230 /* deadpool.json */; };
 		4CF086B7218A230700CFE230 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF086B6218A230700CFE230 /* Extensions.swift */; };
-		4CF086B9218A25A200CFE230 /* bitcoin_to_the_moon.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CF086B8218A25A200CFE230 /* bitcoin_to_the_moon.json */; };
 		78E9C741B056470364BF386C /* Pods_Lottie_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C6A473A5D075F5FB77BA33 /* Pods_Lottie_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		121F14A762D993A51BC054C3 /* Pods-Lottie Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lottie Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lottie Example/Pods-Lottie Example.debug.xcconfig"; sourceTree = "<group>"; };
 		13074A2F2F70E8DFE1105FF4 /* Pods-Lottie Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lottie Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lottie Example/Pods-Lottie Example.release.xcconfig"; sourceTree = "<group>"; };
+		4C0A1278218BFFE700EF3519 /* confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = confetti.json; sourceTree = "<group>"; };
+		4C0A127A218BFFEC00EF3519 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		4C0A1280218C001300EF3519 /* material_wave_loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = material_wave_loading.json; sourceTree = "<group>"; };
+		4C0A1282218C001B00EF3519 /* preloader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = preloader.json; sourceTree = "<group>"; };
 		4CF0869D218A207D00CFE230 /* Lottie Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lottie Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF086A0218A207D00CFE230 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CF086A2218A207D00CFE230 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4CF086A7218A207E00CFE230 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CF086AA218A207E00CFE230 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CF086AC218A207E00CFE230 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4CF086B4218A22A400CFE230 /* deadpool.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = deadpool.json; sourceTree = "<group>"; };
 		4CF086B6218A230700CFE230 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		4CF086B8218A25A200CFE230 /* bitcoin_to_the_moon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bitcoin_to_the_moon.json; sourceTree = "<group>"; };
 		F3C6A473A5D075F5FB77BA33 /* Pods_Lottie_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lottie_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -73,8 +77,10 @@
 		4CF0869F218A207D00CFE230 /* Lottie Example */ = {
 			isa = PBXGroup;
 			children = (
-				4CF086B8218A25A200CFE230 /* bitcoin_to_the_moon.json */,
-				4CF086B4218A22A400CFE230 /* deadpool.json */,
+				4C0A1282218C001B00EF3519 /* preloader.json */,
+				4C0A1280218C001300EF3519 /* material_wave_loading.json */,
+				4C0A127A218BFFEC00EF3519 /* loading.json */,
+				4C0A1278218BFFE700EF3519 /* confetti.json */,
 				4CF086A0218A207D00CFE230 /* AppDelegate.swift */,
 				4CF086A2218A207D00CFE230 /* ViewController.swift */,
 				4CF086A7218A207E00CFE230 /* Assets.xcassets */,
@@ -154,10 +160,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CF086B5218A22A400CFE230 /* deadpool.json in Resources */,
+				4C0A1279218BFFE700EF3519 /* confetti.json in Resources */,
+				4C0A127B218BFFEC00EF3519 /* loading.json in Resources */,
 				4CF086AB218A207E00CFE230 /* LaunchScreen.storyboard in Resources */,
-				4CF086B9218A25A200CFE230 /* bitcoin_to_the_moon.json in Resources */,
+				4C0A1283218C001B00EF3519 /* preloader.json in Resources */,
 				4CF086A8218A207E00CFE230 /* Assets.xcassets in Resources */,
+				4C0A1281218C001300EF3519 /* material_wave_loading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
