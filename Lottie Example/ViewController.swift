@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     lazy var button: UIButton = {
        let button = UIButton()
         button.setTitle("Next Animation", for: .normal)
-        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(.red, for: .normal)
         button.addTarget(self, action: #selector(handleTap), for: .touchUpInside)
         return button
     }()
@@ -32,6 +32,12 @@ class ViewController: UIViewController {
     @objc fileprivate func handleTap() {
         currentAnimation = currentAnimation == "bitcoin_to_the_moon" ?  animations[1] : animations[0]
         animationView.setAnimation(named: currentAnimation)
+
+        animationView.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        UIView.animate(withDuration: 3.0, delay: 0.0, options: [.curveEaseOut], animations: {
+            self.animationView.transform = CGAffineTransform.identity
+        }, completion: nil)
+        
         animationView.loopAnimation = true
         animationView.play()
     }
