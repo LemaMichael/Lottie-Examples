@@ -11,7 +11,7 @@ import Lottie
 
 class ViewController: UIViewController {
     
-    var currentAnimation = "loading"
+    var currentAnimation = 0
     let animations = ["loading", "material_wave_loading", "preloader"]
 
     
@@ -19,7 +19,7 @@ class ViewController: UIViewController {
        let button = UIButton()
         button.setTitle("Next Animation", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         button.addTarget(self, action: #selector(handleTap), for: .touchUpInside)
         return button
     }()
@@ -31,14 +31,8 @@ class ViewController: UIViewController {
     }()
     
     @objc fileprivate func handleTap() {
-        if currentAnimation == "preloader" {
-            currentAnimation = "loading"
-        } else {
-            if let i = animations.index(where: { $0 == currentAnimation }) {
-                currentAnimation =  animations[i + 1]
-            }
-        }
-        animationView.setAnimation(named: currentAnimation)
+        currentAnimation = currentAnimation == animations.count - 1 ? 0 : currentAnimation + 1
+        animationView.setAnimation(named: animations[currentAnimation])
 
         animationView.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
         UIView.animate(withDuration: 3.0, delay: 0.0, options: [.curveEaseOut], animations: {
@@ -57,20 +51,25 @@ class ViewController: UIViewController {
         view.addSubview(animationView)
         view.addSubview(button)
         
-        animationView.anchor(top: nil, bottom: self.view.safeAreaLayoutGuide.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 0, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, width: 0, height: 350)
+        setConstraints()
+    }
+    
+    func setConstraints() {
+        animationView.anchor(top: nil, bottom: nil, left: nil, right: nil, paddingTop: 0, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, width: 150, height: 150)
         animationView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        
-        button.anchor(top: nil, bottom: nil, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 0, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, width: 250, height: 60)
+        animationView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        button.anchor(top: nil, bottom: self.view.safeAreaLayoutGuide.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 0, paddingBottom: 0, paddingLeft: 0, paddingRight: 0, width: 0, height: 60)
         button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        button.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-
     }
     
     func beginAnimation() {
-        animationView.setAnimation(named: animations[0])
+        animationView.setAnimation(named: animations[currentAnimation])
         animationView.play()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
 }
 
